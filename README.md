@@ -1,1 +1,1 @@
-# Self-Optimization-Mania-
+# Self-Optimization-Mania
