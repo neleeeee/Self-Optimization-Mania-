@@ -1,0 +1,93 @@
+body {
+    margin-top: 60px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: yellow;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start; /* horizontal bleibt zentriert, vertikal oben */
+    align-items: center;         /* horizontal zentriert */
+    flex-direction: column;      /* alles vertikal */
+    height: 100vh;
+}
+
+p {
+    color: yellow;                
+    -webkit-text-stroke: 2px rgb(0, 0, 0); 
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;         /* Abstand zum Bild */
+}
+
+/* Container für Bild + Checkboxen vertikal */
+.main-container {
+    display: flex;
+    flex-direction: column;      /* Bild oben, Checkboxen darunter */
+    align-items: center;         /* zentriert */
+    gap: 20px;                   /* Abstand zwischen Bild und Checkboxen */
+}
+
+/* Bild */
+.image-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Checkboxen unterhalb des Bildes */
+/* Checkboxen unterhalb des Bildes */
+.checkbox-list input[type="checkbox"] {
+    -webkit-appearance: none;  /* entfernt Standard-Design */
+    appearance: none;
+    width: 30px;               /* Größe der Kästchen */
+    height: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 72, 207);
+    background-color: white;
+    position: relative;        /* für Haken-Position */
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+/* Hover-Effekt */
+.checkbox-list input[type="checkbox"]:hover {
+    transform: scale(1.1);
+    background-color: #e6f7ff;
+}
+
+/* Haken sichtbar, wenn aktiviert */
+.checkbox-list input[type="checkbox"]:checked::after {
+    content: "✔";                 /* Haken */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;               /* Haken-Größe passend zum Kästchen */
+    color: rgb(249, 8, 8);
+                      /* Hakenfarbe */
+}
+
+.timer-bar {
+    position: fixed;          /* immer unten */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #ff0303;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.timer-progress {
+    height: 100%;
+    width: 80%;              /* Start volle Breite */
+    background-color:  rgb(26, 1, 255);
+    border-radius: 10px;
+    animation: emptyTimer 8s linear forwards; /* 8 Sekunden */
+}
+
+@keyframes emptyTimer {
+    from { width: 100%; }     /* volle Leiste */
+    to { width: 0%; }         /* läuft auf 0% */
+}

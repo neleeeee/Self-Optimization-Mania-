@@ -1,0 +1,67 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.headline {
+    margin-bottom: 30px;
+    font-size: 5rem;
+    color: rgb(0, 72, 207);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-weiter {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 500px;        /* Breite des Sliders */
+    height: 25px;        /* Höhe des Balkens → dicker */
+    background: yellow;
+    border-radius: 20px; /* abgerundete Balken */
+    outline: none;
+
+    flex-shrink: 0;
+}
+
+/* Slider-Thumb (Zieh-Knopf) */
+.slider-weiter::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;          /* Breite des Knopfs */
+    height: 40px;         /* Höhe des Knopfs → größer */
+    background: rgb(0, 72, 207);
+    border-radius: 50%;   /* rund */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Hover-Effekt für den Thumb */
+.slider-weiter::-webkit-slider-thumb:hover {
+    transform: scale(1.2); /* leicht vergrößern beim Hover */
+}
+
+/* Firefox-Kompatibilität */
+.slider-weiter::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background: rgb(0, 72, 207);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
+
+

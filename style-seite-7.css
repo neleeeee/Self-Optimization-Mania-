@@ -1,0 +1,43 @@
+.end-btn {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    /* WICHTIG: Wir nutzen margin-left statt transform zur Zentrierung, 
+       damit die Animation freie Bahn hat */
+    width: 200px; /* Feste Breite hilft bei der Zentrierung */
+    margin-left: -100px; 
+    
+    z-index: 9999;
+    padding: 12px 0; /* Padding seitlich auf 0, da Breite fest */
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #ca555f;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: block;
+    animation: vibrate 0.1s linear infinite; /* Schnelleres Intervall für echtes Zittern */
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.end-btn:hover {
+    background-color: #ca555f;
+    color: #000;
+    animation: none; /* Stoppt beim Hover für Klickbarkeit */
+    box-shadow: 0 0 20px #ca555f;
+}
+
+/* Die Vibrations-Logik ohne Konflikt mit der Zentrierung */
+@keyframes vibrate {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-3px, 3px); }
+    50% { transform: translate(3px, -3px); }
+    75% { transform: translate(-3px, -3px); }
+    100% { transform: translate(3px, 3px); }
+}

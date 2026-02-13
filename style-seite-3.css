@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Oder deine Wunschfarbe */
+    font-family: sans-serif;
+}
+
+.message {
+    font-size: 2.5rem;
+    color: #ca555f;
+    font-weight: 900;
+    margin-bottom: 40px; /* Abstand zum Button */
+    text-align: center;
+}
+
+button.ok-button {
+    all: unset; /* Entfernt Browser-Standard-Styles */
+    display: inline-block;
+    
+    /* Größe */
+    padding: 40px 120px; 
+    font-size: 48px; 
+    font-weight: 900;
+    
+    /* Design */
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    
+    /* Interaktion */
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Kleiner Effekt beim Drüberfahren, damit er sich "echt" anfühlt */
+button.ok-button:hover {
+    background-color: #333;
+    transform: scale(1.05); /* Wird minimal größer */
+}
+
+/* Effekt beim Anklicken */
+button.ok-button:active {
+    transform: scale(0.95); /* Drückt sich optisch ein */
+}

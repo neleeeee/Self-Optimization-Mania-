@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.job-message {
+    text-align: center;
+    font-size: 1em;
+    color: #000;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.ok-btn {
+    padding: 16px 48px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: #ca555f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+    margin: 0;
+}
+
+.ok-btn:hover {
+    background: #a13b45;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100vw;
+    margin-top: 40px;
+    gap: 2vw;
+}
+
+.spread-img {
+    max-width: 28vw;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+
+.spread-img {
+    transform: rotate(calc(-10deg + 20deg * var(--r)));
+}
+
+.apply-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 40px;
+}
+

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* horizontal zentrieren */
+    align-items: flex-start; /* oben ausrichten */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 500px;      /* genau 200px von oben */
+}
+
+/* Cursor für die gesamte Seite */
+/* Cursor für die gesamte Seite */
+.image-container img {
+    cursor: url('./assets/media/cursor.png') 16 16, pointer !important;
+}
+
+.timer-bar {
+    position: fixed;          /* immer unten */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #ff0303;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.timer-progress {
+    height: 100%;
+    width: 80%;              /* Start volle Breite */
+    background-color:  rgb(26, 1, 255);
+    border-radius: 10px;
+    animation: emptyTimer 8s linear forwards; /* 8 Sekunden */
+}
+
+@keyframes emptyTimer {
+    from { width: 100%; }     /* volle Leiste */
+    to { width: 0%; }         /* läuft auf 0% */
+}
